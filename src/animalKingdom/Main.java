@@ -90,6 +90,16 @@ public class Main{
 
         AllList.sort((y1, y2) -> y2.getYear()-y1.getYear());
         System.out.println(AllList);
+
+        System.out.println("\n***Alphabetical***\n");
+
+        AllList.sort((n1, n2) -> n1.getName().compareToIgnoreCase(n2.getName()));
+        System.out.println(AllList);
+
+        System.out.println("\n***Move Order***\n");
+
+        AllList.sort((m1, m2) -> m1.getMove().compareToIgnoreCase(m2.getMove()));
+        System.out.println(AllList);
     }
 
 }
