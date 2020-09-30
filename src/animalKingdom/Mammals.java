@@ -39,5 +39,9 @@ public class Mammals extends AbstractAnimal {
         return "Live Births";
     }
 
+    @Override 
+    public String toString(){
+        return " Name: " + name + " Year: " + year;
+    }
 
 }

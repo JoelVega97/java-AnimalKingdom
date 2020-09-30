@@ -100,6 +100,27 @@ public class Main{
 
         AllList.sort((m1, m2) -> m1.getMove().compareToIgnoreCase(m2.getMove()));
         System.out.println(AllList);
+
+        System.out.println("\n***Lungs***\n");
+
+        List<AbstractAnimal> lungList = filterAnimal(AllList, a -> a.getBreath() == "Lungs");
+        lungList.forEach(l -> System.out.println(l.getName() + " " + l.getReproduce() + " " + l.getBreath() + " " + l.getYear()));
+
+        System.out.println("\n***Lungs and 1758***\n");
+
+        List<AbstractAnimal> thisList = filterAnimal(AllList, a -> (a.getBreath() == "Lungs" && a.getYear() == 1758));
+        thisList.forEach(l -> System.out.println(l.getName() + " " + l.getReproduce() + " " + l.getBreath() + " " + l.getYear()));
+
+        System.out.println("\n***Eggs and Lungs***\n");
+
+        List<AbstractAnimal> eggsList = filterAnimal(AllList, a -> (a.getBreath() == "Lungs" && a.getReproduce() == "Eggs"));
+        eggsList.forEach(l -> System.out.println(l.getName() + " " + l.getReproduce() + " " + l.getBreath() + " " + l.getYear()));
+
+        System.out.println("\n***Alphabetically in 1758***\n");
+
+        List<AbstractAnimal> alpha58 = filterAnimal(AllList, a -> a.getYear() == 1758);
+        alpha58.sort((n1, n2) -> n1.getName().compareToIgnoreCase(n2.getName()));
+        alpha58.forEach(l -> System.out.println(l.getName() + " " + l.getReproduce() + " " + l.getBreath() + " " + l.getYear()));
     }
 
 }

@@ -30,8 +30,5 @@ abstract class AbstractAnimal {
     abstract String getBreath();
     abstract String getReproduce();
 
-    @Override 
-    public String toString(){
-        return " Name: " + name + " Year: " + year;
-    }
+
 }

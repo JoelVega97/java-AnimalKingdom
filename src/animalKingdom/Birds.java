@@ -37,4 +37,10 @@ public class Birds extends AbstractAnimal {
     public String getReproduce(){
         return "Eggs";
     }
+    
+    @Override 
+    public String toString(){
+        return " Name: " + name + " Year: " + year;
+    }
+
 }
