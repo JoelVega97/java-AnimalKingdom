@@ -2,12 +2,33 @@ package animalKingdom;
 
 public class Fish extends AbstractAnimal {
 
-    private static int maxId = 0;
 
-    private int id;
-    private String name;
-    private int year;
 
+    public Fish(String name, int year){
+        super(name, year);
+    }
+
+    
+    //sets and gets
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+         this.id = id;
+    }
+    
+    public String getName(){
+        return name;
+    }
+
+    public int getYear(){
+        return year;
+    }
+    public void setYear(int year){
+        this.year = year;
+    }
+
+    //interface methods
     public String getMove(){
         return "Swim";
     }
